@@ -12,7 +12,7 @@ def readfile():
  for l in fp:
   b= l.strip().split(" ")
   nodes.append("".join(b))
-fp.close()
+ fp.close()
 
 def complement(ch):
 
@@ -29,23 +29,23 @@ def complement(ch):
 def closest(node):
 
   
-  closer = []
+ closer = []
    
  for i in range(l):
  
-       closer.append(node[:i] + complement(node[i]) + node[i+1:])
+     closer.append(node[:i] + complement(node[i]) + node[i+1:])
   
-      for j in range(l):
+     for j in range(l):
      
        closer.append(node[:i] + complement(node[i]) + node[i+1:j] + complement(node[j]) + node[j+1:])
 
-    return closer
+ return closer
 
 
 
 def find(v):
  
-   while parent[v] != v:
+  while parent[v] != v:
   
       v = parent[v]
   
@@ -62,9 +62,9 @@ def union(j , k):
 def clusterbits():
  for i in nodes:
   
-   head[i] = i
+  head[i] = i
     
-   clusters = len(head)
+  clusters = len(head)
 
   
   for i in nodes:
@@ -77,11 +77,12 @@ def clusterbits():
   
               k = find(c)
     
-            if j != k:
+              if j != k:
                
-     union(j , k)
+               union(j , k)
              
-       clusters = clusters - 1
+               clusters = clusters - 1
+               print (clusters)
  return clusters
 
 def main():
@@ -92,4 +93,5 @@ def main():
 
 if __name__ == "__main__":
  main()
+ 
  
