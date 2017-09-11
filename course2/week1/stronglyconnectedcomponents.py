@@ -1,12 +1,4 @@
 import sys
-import resource
-sys.setrecursionlimit(2 ** 20)
-
-hardlimit = resource.getrlimit(resource.RLIMIT_STACK)[1]
-
-resource.setrlimit(resource.RLIMIT_STACK,(hardlimit,hardlimit))
-
-
 gr = {}
 n = 875714
 vis = {}
@@ -15,7 +7,7 @@ g2 = {}
 size = []
 stk = []
 
-def readfile:
+def readfile():
  global c
  for i in range(1,n+1):
   gr[i], g2[i] = [], []
@@ -27,16 +19,16 @@ def readfile:
  gr[v1].append(v2)
  g2[v2].append(v1)
  c = c+1
-fp.close()
+ fp.close()
 
 def dfs(u,graph):
  k = 1
  vis[u] = 1
-for v in graph[u]:
- if vis[v] == 0:
-  k = k + dfs(v,graph)
-  stk.extend([u])
-return k
+ for v in graph[u]:
+  if vis[v] == 0:
+   k = k + dfs(v,graph)
+   stk.extend([u])
+ return k
   
 def scc():
  for i in range(1,n+1):
@@ -57,12 +49,15 @@ def main():
  readfile()
  traverse(gr)
  scc()
- print("The Strongly Connected Components in the decreasing order are)
+ print("The Strongly Connected Components in the decreasing order are")
  size.sort()
  print(size[-5:])
 
 if __name__ == "__main__":
  main()
+ 
+
+  
  
 
   
