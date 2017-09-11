@@ -1,5 +1,4 @@
 import sys
-count = 0
 A = {}
  
 def readfile():
@@ -7,7 +6,7 @@ def readfile():
  for l in fp:
   num = int(l.rstrip("\n"))
   A[num] = 1
-fp.close()
+ fp.close()
 
 def target(t):
  for x in A:
@@ -20,6 +19,7 @@ def target(t):
 
 def main():
  readfile()
+ count = 0
  low = -10000
  high = 10000
  for i in range(low, high +1):
@@ -29,4 +29,5 @@ def main():
 
 if __name__ == "__main__":
  main() 
+ 
  
