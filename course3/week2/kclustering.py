@@ -13,7 +13,7 @@ def readfile():
   v2 = int(edge[1])
   ecost = int(edge[2])
   edges.append([ecost , v1 ,v2])
-fp.close()
+ fp.close()
 edges = sorted(edges)
 
 def union(a, b):
@@ -21,7 +21,7 @@ def union(a, b):
   if head[i] == a:
    head[i] = b
  head[a] = b
-return true
+ return true
 
 def cluster():
  for i in range(1,n+1):
@@ -57,5 +57,8 @@ def main():
 
 if __name__ == "__main__":
  main()
+ 
+
+
  
 
