@@ -21,7 +21,7 @@ def readfile():
  for l in fp:
   w[i] = int(l.strip("\n")
   i = i + 1
-fp.close()
+ fp.close()
 
 def huffmantree():
  while len(tree) > 1:
@@ -44,14 +44,16 @@ def traverse(rt):
 
 def main():
  readfile()
-for i in range(1,n+1):
- heapq.heappush(tree,(w[i],HeapNode(ch=i)))
-huffmanntree()
-head = heapq.heappop(tree)
-root = head[1]
-print(" Max length = ", traverse(root))
+ for i in range(1,n+1):
+  heapq.heappush(tree,(w[i],HeapNode(ch=i)))
+ huffmanntree()
+ head = heapq.heappop(tree)
+ root = head[1]
+ print(" Max length = ", traverse(root))
 
 if __name__ == "__main__":
  main()
+ 
+ 
  
  
