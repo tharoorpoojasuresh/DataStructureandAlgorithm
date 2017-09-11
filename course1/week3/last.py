@@ -35,9 +35,9 @@ def partition(low, high):
       
          count = count + 1
 
-    A[pivot], A[i-1] = A[i-1], A[pivot]
+         A[pivot], A[i-1] = A[i-1], A[pivot]
  
-   return i-1
+  return i-1
 
 
 def readfile():
@@ -50,7 +50,7 @@ def readfile():
  
      A.append(int(m))
    
- fp.close()
+   fp.close()
 
  
 
