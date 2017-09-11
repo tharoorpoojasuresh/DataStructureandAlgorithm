@@ -14,7 +14,7 @@ def readfile():
  for i in range(1,len(e)+1):
   cost = e[i].split(",")
   gr[v1][int(cost[0])] = int(cost[1])
-fp.close()
+ fp.close()
 
 def min(dist):
  min = 1000000
@@ -29,11 +29,11 @@ def min(dist):
 def dij(st):
  for i in range(1,n+1):
   vis[i] = 0
- dist[i] = 1000000
+  dist[i] = 1000000
  edge = gr[st]
  for key in edge.keys():
   dist[key] = edge[key]
-  dist[st] = 0
+ dist[st] = 0
  vis[st] = 1
  for i in range(2,n+1):
   u = min(dist)
@@ -52,4 +52,5 @@ def main():
 
 if __name__ == "__main__":
  main()
+  
   
