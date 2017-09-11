@@ -5,13 +5,14 @@ lower = []
 higher = []
 
 def readfile():
+ global n
  fp = open("Median.txt","r")
  for l in fp:
   add(int(l))
  balance()
  median.append(calMedian())
- n=n+1
-fp.close()
+ n = n + 1
+ fp.close()
 
 def calMedian():
  low = len(lower)
@@ -55,9 +56,11 @@ def balance():
 def main():
  readfile()
  sum = 0
-for i in range(1,n+1):
- sum = sum + int(median[i])
-print ("overall median = ", sum % 10000)
+ for i in range(1,n+1):
+  sum = sum + int(median[i])
+ s = int( sum % 10000 )
+ print ("overall median = ", s)
 
 if __name__ == "__main__":
  main()
+
