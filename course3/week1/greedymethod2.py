@@ -9,19 +9,19 @@ def readfile():
  fp = open("jobs.txt","r")
  #first line is no. of jobs
  n = int(fp.readline().split(" "))
-for i in range(1, n+1):
+ for i in range(1, n+1):
   
       weights.append(0)
  
       lengths.append(0)
 
-i=1
+ i=1
  for l in fp:
   ln = l.split(" ")
-   weights[i] = int(ln[0])
-   lengths[i] = int(ln[1])
+  weights[i] = int(ln[0])
+  lengths[i] = int(ln[1])
   i=i+1
-fp.close()
+ fp.close()
 
 
 def sortweights():
@@ -85,7 +85,7 @@ def order():
        compltimes.append(0)
   
   
- for d in ls:
+for d in ls:
     
     
     for job in diff[d]:
@@ -108,9 +108,12 @@ def main():
  
        sumweighted = sumweighted + ( compltimes[i] * weights[i])
    
-  print("Sum of weighted completion times = ", sumweighted)
+ print("Sum of weighted completion times = ", sumweighted)
 
 if __name__ == "__main__":
  main()
+
+
+
 
 
