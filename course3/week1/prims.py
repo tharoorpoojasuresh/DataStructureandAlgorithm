@@ -16,7 +16,7 @@ def readfile():
  
        gr[i] = {}
   
-  for l in fp:
+ for l in fp:
   
       edge = l.split(" ")
 
@@ -40,7 +40,7 @@ def prims(st):
  for i in range(1, n+1):
    
      adj[i] = 999999 
-  min = 999999
+ min = 999999
  for i in range(1,n+1):
   if min > adj[i] and i not in mst:
     min = near[i]
@@ -48,8 +48,8 @@ def prims(st):
     mincost = mincost + adj[j]
  mst.append(j)
  for i in range(1,n+1):
- if i in gr[j]:
-  if adj[i] > gr[j][i] and i not in mst:
+  if i in gr[j]:
+   if adj[i] > gr[j][i] and i not in mst:
     adj[i] = gr[j][i]  
 
 def main():
@@ -59,4 +59,6 @@ def main():
 
 if __name__ == "__main__":
  main()
+
+
 
