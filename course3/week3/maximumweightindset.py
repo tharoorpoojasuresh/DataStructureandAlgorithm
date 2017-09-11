@@ -8,7 +8,7 @@ def readfile():
  n = int(l1)
  for l in fp:
   weights.append(int(l))
-fp.close()
+ fp.close()
 
 def mwis():
  A = [0, weights[1]]
@@ -30,7 +30,7 @@ def main():
  for v in ver:
   if v in vertices:
    print("1")
-  else
+  else :
    print("0")
 
 if __name__ == "__main__":
